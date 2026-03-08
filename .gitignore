@@ -1,0 +1,11 @@
+__pycache__/
+.DS_Store
+.idea/
+*.pdf
+.venv/
+env/
+venv/
+*.pyc
+/tmp/
+sudoku_web/
+arch/

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Architect - Premium Generator</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="glass-bg"></div>
+    <div class="container">
+        <header>
+            <h1>Sudoku <span class="accent">Architect</span></h1>
+            <p>Generate logically solvable puzzles with difficulty scoring.</p>
+        </header>
+
+        <main>
+            <section class="controls">
+                <div class="glass-card">
+                    <h3>Generate New</h3>
+                    <div class="button-group">
+                        <button onclick="generateSudoku('Easy')" class="btn secondary">Easy</button>
+                        <button onclick="generateSudoku('Medium')" class="btn primary">Medium</button>
+                        <button onclick="generateSudoku('Hard')" class="btn primary">Hard</button>
+                        <button onclick="generateSudoku('Expert')" class="btn danger">Expert</button>
+                    </div>
+                </div>
+
+                <div class="glass-card stats">
+                    <h3>Puzzle Info</h3>
+                    <p>Current Score: <span id="score-val" class="accent">--</span></p>
+                    <button id="download-btn" onclick="downloadPDF()" class="btn outline" disabled>Download PDF</button>
+                </div>
+            </section>
+
+            <section class="game-area">
+                <div class="grid-container glass-card" id="sudoku-grid">
+                    <!-- Grid will be injected here -->
+                    <div class="loader">Select difficulty to generate...</div>
+                </div>
+
+                <aside class="debug-panel glass-card">
+                    <h3>Logical Steps</h3>
+                    <div id="steps-list" class="steps-container">
+                        <p class="placeholder">Solving steps will appear here...</p>
+                    </div>
+                </aside>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+services:
+  sudoku-architect:
+    build: .
+    container_name: sudoku-architect
+    ports:
+      - "5090:5090"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+    restart: unless-stopped

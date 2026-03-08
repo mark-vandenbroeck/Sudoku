@@ -1,5 +1,7 @@
 # Sudoku Architect
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Sudoku-blue?logo=github)](https://github.com/mark-vandenbroeck/Sudoku)
+
 Sudoku Architect is a Python-based Sudoku generator and solver that focuses on **logical solvability** rather than brute force. It generates puzzles with a specific difficulty level by simulating human-like solving techniques and assigning a score based on the complexity of the required steps.
 
 ## Features
